@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+    <title>作者</title>
+</head>
+<body>
+    <!--导航-->
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary menu stackable">
+                <h2 class="ui teal header item">Blog</h2>
+                <a href="#" th:href="@{/}"  class="m-item item m-mobile-hide">首页</a>
+                <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide">分类</a>
+                <a href="#" th:href="@{/tags/-1}" class="m-item item m-mobile-hide">标签</a>
+                <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide">归档</a>
+                <a href="#" th:href="@{/about}" class="active m-item item m-mobile-hide">关于我</a>
+                <div class="right item m-item m-mobile-hide">
+                    <form  name="search" action="#" th:action="@{/search}" method="post" >
+                        <div class="ui icon input">
+                            <input  type="text" name="query" placeholder="Search...." th:value="${query}">
+                            <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <!--中间内容-->
+    <div class="ui container m-opacity box-shadow-max">
+        <div class="ui segment m-margin-" align="center">
+            <div class="m-margin-top-large" align="center">
+                <img class="ui circular image" align="center" src="../static/images/avator.jpg" th:src="@{/images/avator.jpg}" style="width: 150px;height: 150px;">
+            </div>
+            <div class="m-margin-top-small" style="font-size: x-large;font-family: STSong" align="center">Ami</div>
+
+            <div class="m-margin-top" align="center">
+                <a href="#" class="ui tencent circular icon button"><i class="user icon"></i></a>
+                <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i> </a>
+                <a href="#" class="ui qq circular icon button" data-content="2237933873" data-position="bottom center"><i class="qq icon"></i></a>
+                <a href="https://github.com/Ami-ZH" target="_blank" class="ui github circular icon button" data-content="点击跳转GitHub" data-position="bottom center"><i class="github icon"></i></a>
+                <a href="https://blog.csdn.net/AmiVincent" target="_blank" class="ui csdn circular icon button" data-content="点击跳转CSDN" data-position="bottom center"><i class="copyright outline icon"></i></a>
+                <a href="#" class="ui email circular icon button" data-content="ami_zh@163.com" data-position="bottom center"><i class="envelope  icon"></i></a>
+            </div>
+            <div class="ui wechat-qr flowing popup transition hidden">
+                <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded image" style="width: 110px">
+                <div align="center">微信</div>
+            </div>
+            <div class="ui qq-qr flowing popup transition hidden">
+                <img src="../static/images/QQ2.jpg" th:src="@{/images/QQ2.jpg}" alt="" class="ui rounded image" style="width: 110px">
+                <div align="center">QQ</div>
+            </div>
+
+            <div class="ui tencent-qr flowing popup transition hidden">
+                <img src="../static/images/gongzonghao.jpg" th:src="@{/images/gongzonghao.jpg}" alt="" class="ui rounded image" style="width: 110px">
+                <div align="center">公众号</div>
+            </div>
+            <hr class="m-margin-top-small" style="width: 30%">
+            <br>
+            <div>
+                <p>95后</p>
+                <p>爱编程、爱运动、爱折腾</p>
+                <p>生命不息，折腾不止</p>
+                <p>bug没解决，干啥啥不爽</p>
+                <p>哈哈哈...</p>
+            </div>
+            <hr class="m-margin-top-large">
+            <h2>你不该犯人生最重的罪：虚度光阴</h2>
+            <p>---------巴比龙</p>
+        </div>
+    </div>
+    <!--底部-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column ">
+                    <h4 class="ui inverted header m-opacity-mini m-text-spaced">QQ交流群</h4>
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../static/images/qqjiaoliuqun.png" th:src="@{/images/qqjiaoliuqun.png}" alt="" class="ui rounded image" style="width:120px ">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column ">
+                    <h4 class="ui inverted header m-opacity-mini m-text-spaced">微信公众号</h4>
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../static/images/gongzonghao.jpg" th:src="@{/images/gongzonghao.jpg}" alt="" class="ui rounded image" style="width:120px ">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-opacity-mini m-text-spaced">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item m-text-thin  m-text-spaced">Email:ami_zh@163.com</a>
+                        <a href="#" class="item m-text-thin  m-text-spaced">QQ:2237933873</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-opacity-mini m-text-spaced">Blog</h4>
+                    <p class="m-text-thin m-opacity-mini m-text-spaced">这是我的个人博客，我会在此分享关于一些个人经历以及编程知识，我会不定期进行更新。感谢您的访问</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">终于等到你：<span id="htmer_time" class="item m-text-thin"></span> </div>
+            <p class="m-text-thin m-opacity-mini m-text-spaced">&copy;蜀ICP备1000001</p>
+        </div>
+    </footer>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+    // 显示QQ
+    $('.qq').popup({
+        popup : $('.qq-qr'),
+        position: 'bottom center'
+    });
+    $('.wechat').popup({
+        popup:$('.wechat-qr'),
+        position:'bottom center'
+    });
+    // 显示CSDN
+    $('.csdn').popup();
+
+    // 显示github
+    $('.github').popup();
+    // 显示邮箱
+    $('.email').popup();
+    // 显示公众号
+    $('.tencent').popup({
+        popup : $('.tencent-qr'),
+        position: 'bottom center'
+    });
+
+    //===================分割线========================
+    // 运行时间统计
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }
+    function setTime() {
+        /*此处为网站的创建时间*/
+        var create_time = Math.round(new Date(Date.UTC(2020, 07, 30, 15, 15, 15)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+            + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+            + '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }
+    setInterval(setTime, 1000);
+    //===================分割线========================
+</script>
+</body>
+</html>
