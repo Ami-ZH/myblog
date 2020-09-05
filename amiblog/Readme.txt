@@ -1,2 +1,2 @@
 1.使用sql文件在mysql中创建表blog
-2.在application.yml中配置datasource
+2.配置数据源在application.yml中配置datasource
